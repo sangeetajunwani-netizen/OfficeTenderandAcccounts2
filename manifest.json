@@ -1,0 +1,25 @@
+
+{
+  "short_name": "Nexus",
+  "name": "Nexus Office Fund & Tender",
+  "description": "Professional Management System for Office Funds and Tenders.",
+  "categories": ["business", "finance", "productivity"],
+  "icons": [
+    {
+      "src": "https://api.dicebear.com/7.x/initials/svg?seed=Nexus&backgroundColor=4f46e5",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://api.dicebear.com/7.x/initials/png?seed=Nexus&backgroundColor=4f46e5",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#4f46e5",
+  "background_color": "#0f172a"
+}
