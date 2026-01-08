@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { exportData, importData } from '../services/dbService';
+import { exportData, importData } from '../services/dbService.ts';
 
 const Settings: React.FC = () => {
   const [isImporting, setIsImporting] = useState(false);
@@ -84,7 +84,6 @@ const Settings: React.FC = () => {
         </div>
       </div>
 
-      {/* App Packaging Section */}
       <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
         <div className="flex items-center gap-4 mb-6">
           <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center">
@@ -144,40 +143,6 @@ const Settings: React.FC = () => {
             </div>
           </div>
         )}
-
-        {activeInstruction === 'exe' && (
-          <div className="mt-6 p-6 bg-slate-900 rounded-xl text-slate-300 font-mono text-xs overflow-x-auto space-y-4 animate-fadeIn">
-            <p className="text-indigo-400 font-bold">// Windows Build Instructions (Electron)</p>
-            <p>1. Install Electron: <span className="text-white">npm install --save-dev electron</span></p>
-            <p>2. Create <span className="text-white">main.js</span> with loadFile('index.html')</p>
-            <p>3. Add build script to package.json: <span className="text-emerald-400">"build:exe": "electron-builder"</span></p>
-            <p>4. Run build command to generate the .exe installer.</p>
-          </div>
-        )}
-
-        {activeInstruction === 'apk' && (
-          <div className="mt-6 p-6 bg-slate-900 rounded-xl text-slate-300 font-mono text-xs overflow-x-auto space-y-4 animate-fadeIn">
-            <p className="text-emerald-400 font-bold">// Android Build Instructions (Capacitor)</p>
-            <p>1. Install Capacitor: <span className="text-white">npm install @capacitor/core @capacitor/cli</span></p>
-            <p>2. Initialize: <span className="text-white">npx cap init</span></p>
-            <p>3. Add Android platform: <span className="text-white">npx cap add android</span></p>
-            <p>4. Open in Android Studio: <span className="text-white">npx cap open android</span></p>
-            <p>5. Build -> Build Bundle/APK -> Build APK.</p>
-          </div>
-        )}
-      </div>
-
-      <div className="bg-amber-50 p-6 rounded-2xl border border-amber-100 flex gap-4">
-        <div className="text-amber-500">
-          <i className="fa-solid fa-triangle-exclamation text-2xl"></i>
-        </div>
-        <div className="space-y-1">
-          <h4 className="font-bold text-amber-900 text-sm">Security & Storage Note</h4>
-          <p className="text-xs text-amber-800 leading-relaxed">
-            This app uses **IndexedDB**. Data is specific to this browser/device. 
-            Backup daily to ensure your records are safe across devices.
-          </p>
-        </div>
       </div>
     </div>
   );

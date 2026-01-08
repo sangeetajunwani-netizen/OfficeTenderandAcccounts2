@@ -1,5 +1,5 @@
 
-import { Tender, Transaction, Category } from '../types';
+import { Tender, Transaction, Category } from '../types.ts';
 
 const DB_NAME = 'NexusDB';
 const DB_VERSION = 2; // Increment version for new store
